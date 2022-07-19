@@ -133,6 +133,7 @@ func init() {
 		registry.Register(sftransform.EventOriginFilterFactory(indexStore, possibleIndexSizes))
 		registry.Register(sftransform.EventTypeFilterFactory(indexStore, possibleIndexSizes))
 		registry.Register(sftransform.MessageTypeFilterFactory(indexStore, possibleIndexSizes))
+		registry.Register(sftransform.CombinedFilterFactory(indexStore, possibleIndexSizes))
 
 		return firehoseApp.New(appLogger,
 			&firehoseApp.Config{

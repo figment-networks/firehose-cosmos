@@ -47,6 +47,25 @@ func EventTypeFilterFactory(indexStore dstore.Store, possibleIndexSizes []uint64
 	}
 }
 
+func NewEventTypeFilter(in *pbtransform.EventTypeFilter) (*EventTypeFilter, error) {
+	if len(in.EventTypes) == 0 {
+		return nil, fmt.Errorf("an Event Type filter transform requires at-least one event type")
+	}
+
+	filter := &pbtransform.EventTypeFilter{}
+	eventTypeMap := make(map[string]bool)
+	for _, acc := range filter.EventTypes {
+		eventTypeMap[acc] = true
+	}
+
+	f := &EventTypeFilter{
+		EventTypes: eventTypeMap,
+	}
+	panic(f)
+	return f, nil
+
+}
+
 type EventTypeFilter struct {
 	EventTypes map[string]bool
 

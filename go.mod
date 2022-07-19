@@ -60,7 +60,7 @@ require (
 	github.com/Azure/azure-storage-blob-go v0.14.0 // indirect
 	github.com/abourget/llerrgroup v0.0.0-20161118145731-75f536392d17 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/figment-networks/proto-cosmos v0.1.1-0.20220520135517-930111e6fe89
+	github.com/figment-networks/proto-cosmos v0.1.1-0.20220607171251-87ba84e9a0a2
 	github.com/google/renameio v0.1.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/mattn/go-ieproxy v0.0.1 // indirect
